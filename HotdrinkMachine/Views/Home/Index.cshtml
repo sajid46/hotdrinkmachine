@@ -1,8 +1,72 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container row">
+    <div style="margin: auto;
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid gray;
+        margin-bottom: 30px;
+        border-bottom: 16px solid #f9f5ea; ">
+        <h1>Hot Drink Machine</h1>
+    </div>
+    <hr />
+    <div class="flex-container">
+        <input type="button" class="flex-item css-drinkType" onclick="fn_clickDrink('coffee')" value="Coffee" />
+        <input type="button" class="flex-item css-drinkType" onclick="fn_clickDrink('lemontea')" value="Lemon Tea" />
+        <input type="button" class="flex-item css-drinkType" onclick="fn_clickDrink('chocolate')" value="Chocolate" />
+        <input type="button" class="flex-item css-drinkType" onclick="fn_clickDrink('roohafza')" value="Rooh Afza" />
+    </div>
+
+    <div id="divPrepartionInProgress" class="flex-container"></div>
+
 </div>
+
+
+
+    <script>
+        function fn_clickDrink(drinkType) {
+            $.ajax(
+                {
+                    type: "GET",
+                    url: "/Home/GetDrink",
+                    data: { drinkType: drinkType },
+                    success: function (result) {
+                        $("#divPrepartionInProgress").html(result);
+                        $('.css-drinkType').addClass("disableMe");
+                        $('.css-drinkType').disabled = true;
+                        $('.css-drinkType').addClass("css-disableButton");
+                        fn_display(0);
+                    }
+                });
+        }
+
+
+
+        function fn_display(i) {
+            var ln = $('#divPrepartionInProgress')[0].children.length;
+            $('#' + ln).removeClass("blink-me");
+            if (i < ln) {
+                $('.css-drinkProgress').hide();
+                $('#' + $('#divPrepartionInProgress').children(0)[i].id).show()
+                i++;
+            }
+            else {
+                $('#ready').show()
+            }
+            if (i < ln) {
+                setTimeout(function () { fn_display(i) }, 2500)
+            }
+        }
+
+        function fn_drinkReady() {
+            $('.css-drinkType').disabled = false;
+            $('.css-drinkType').removeClass("css-disableButton");
+            $('.css-drinkProgress').css("display", "none");
+            $('.css-drinkProgress-drinkready').css("display", "none");
+        }
+
+
+    </script>

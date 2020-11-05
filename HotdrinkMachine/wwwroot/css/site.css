@@ -58,7 +58,7 @@ html {
   min-height: 100%;
 }
 
-body {
+body, html {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
@@ -68,4 +68,83 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+.flex-item {
+    width: 130px;
+    height: 130px;
+    margin-top: 20px;
+    background-color: white;
+    margin-left: 30px;
+    line-height: 130px;
+
+}
+
+.css-drinkType {
+    background-color: #e6cd8d;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px #5a564a;
+    border: 4px solid #8c7a4e;
+    text-align: center;
+    line-height: 109px;
+    color: #615537;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #ece6d7;
+    font-size: 88%;
+    cursor: pointer;
+}
+
+    .css-drinkType:hover {
+        background-color: #e4e2de;
+        color: white;
+        text-shadow: 3px 3px 10px grey;
+        box-shadow: 0px 0px 20px black;
+    }
+
+.css-drinkProgress {
+    width: 100%;
+    background-color: #463c22;
+    padding: 34px 0px;
+    text-align: center;
+    border: 1px solid #1d1c18;
+    margin-top: 50px;
+    border-radius: 79px;
+    font-size: 44px;
+    color: wheat;
+    box-shadow: 0px -2px 2px white inset;
+}
+
+.css-drinkProgress-drinkready {
+    background-color: #dc3545;
+    color: #f0f7f2;
+    cursor: pointer;
+}
+
+.css-drinkProgress-drinkready:hover {
+    background-color: #c85d5d;
+}
+
+    .blink_me {
+        animation: blinker 1s linear infinite;
+    }
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.css-disableButton {
+    background-color: #e8e5de;
+    box-shadow: 0px 0px 93px #ffffff inset;
+    color: #e0e2e2;
 }
