@@ -9,7 +9,6 @@ D:\Projects\CompanyTests\Red River\HotdrinkMachine\bin\Debug\netcoreapp3.1\Hotdr
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\bin\Debug\netcoreapp3.1\HotdrinkMachine.pdb
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\bin\Debug\netcoreapp3.1\HotdrinkMachine.Views.dll
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\bin\Debug\netcoreapp3.1\HotdrinkMachine.Views.pdb
-D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\HotdrinkMachine.csprojAssemblyReference.cache
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\HotdrinkMachine.AssemblyInfoInputs.cache
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\HotdrinkMachine.AssemblyInfo.cs
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\HotdrinkMachine.csproj.CoreCompileInputs.cache

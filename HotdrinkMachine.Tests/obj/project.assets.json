@@ -901,6 +901,19 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "HotdrinkMachine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/HotdrinkMachine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HotdrinkMachine.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -3459,10 +3472,16 @@
         "xunit.runner.visualstudio.2.4.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "HotdrinkMachine/1.0.0": {
+      "type": "project",
+      "path": "../HotdrinkMachine/HotdrinkMachine.csproj",
+      "msbuildProject": "../HotdrinkMachine/HotdrinkMachine.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "HotdrinkMachine >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.0",
@@ -3502,7 +3521,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\CompanyTests\\Red River\\HotdrinkMachine\\HotdrinkMachine.csproj": {
+              "projectPath": "D:\\Projects\\CompanyTests\\Red River\\HotdrinkMachine\\HotdrinkMachine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -3542,6 +3565,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
