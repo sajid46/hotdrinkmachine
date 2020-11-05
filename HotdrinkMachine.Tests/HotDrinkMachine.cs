@@ -84,7 +84,7 @@ namespace HotdrinkMachine.Tests
             List<ChocolateModel> drinks = new List<ChocolateModel>();
             var drink = new ChocolateModel();
             drink.BoilWater = "Boiling water";
-            drink.AddChocPowderInWater = "Add drinking chocolate powder to the water";
+            drink.AddChocPowderInWater = "Adding chocolate powder to the water";
             drink.PourChocolateInTheCup = "Pouring chocolate in the cup";
             drinks.Add(drink);
             return drinks;
