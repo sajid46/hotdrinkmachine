@@ -35,3 +35,4 @@ D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\Hotdr
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\HotdrinkMachine.pdb
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\HotdrinkMachine.genruntimeconfig.cache
 D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\HotdrinkMachine.csproj.CopyComplete
+D:\Projects\CompanyTests\Red River\HotdrinkMachine\obj\Debug\netcoreapp3.1\Razor\Views\Home\PartialIndex.cshtml.g.cs

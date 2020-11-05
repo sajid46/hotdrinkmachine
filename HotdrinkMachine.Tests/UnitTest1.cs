@@ -54,7 +54,7 @@ namespace HotdrinkMachine.Tests
 
             // Assert
             Assert.NotNull(result.Where(x => x.BoilWater == "Boiling water."));
-            Assert.NotNull(result.Where(x => x.AddChocPowderInWater == "Add drinking chocolate powder to the water"));
+            Assert.NotNull(result.Where(x => x.AddChocPowderInWater == "Adding chocolate powder to the water"));
             Assert.NotNull(result.Where(x => x.PourChocolateInTheCup == "Pouring chocolate in the cup"));
 
         }

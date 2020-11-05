@@ -2,7 +2,7 @@
 
 namespace HotdrinkMachine.Tests
 {
-     public interface IDrink<T>
+    public interface IDrink<T>
     {
         List<T> DrinkInProcess { get; set; }
         List<T> PrepareDrink();
