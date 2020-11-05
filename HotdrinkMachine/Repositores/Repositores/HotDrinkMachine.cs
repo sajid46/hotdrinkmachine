@@ -115,9 +115,9 @@ public class RoohAfza : IDrink<RoohAfzaModel>
         return drinks;
     }
 }
-internal class HotDrinkMachine
+public class HotDrinkMachine
 {
-    internal List<T> PrepareHotDrink<T>(IDrink<T> drink)
+    public List<T> PrepareHotDrink<T>(IDrink<T> drink)
     {
         return drink.PrepareDrink();
     }

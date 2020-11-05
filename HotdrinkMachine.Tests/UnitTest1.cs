@@ -15,6 +15,7 @@ namespace HotdrinkMachine.Tests
             // Arrange
             Coffee drink = new Coffee();
             HotDrinkMachine hotDrinkMachine = new HotDrinkMachine();
+            
 
             // Act
             var result = hotDrinkMachine.PrepareHotDrink(drink);

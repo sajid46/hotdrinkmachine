@@ -94,3 +94,11 @@ D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\obj\Debug\netcoreapp3.1
 D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\obj\Debug\netcoreapp3.1\HotdrinkMachine.Tests.dll
 D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\obj\Debug\netcoreapp3.1\HotdrinkMachine.Tests.pdb
 D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\obj\Debug\netcoreapp3.1\HotdrinkMachine.Tests.genruntimeconfig.cache
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\HotdrinkMachine.Views.dll
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\HotdrinkMachine.Views.pdb
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\HotdrinkMachine.exe
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\HotdrinkMachine.dll
+D:\Projects\CompanyTests\Red River\HotdrinkMachine.Tests\bin\Debug\netcoreapp3.1\HotdrinkMachine.pdb
