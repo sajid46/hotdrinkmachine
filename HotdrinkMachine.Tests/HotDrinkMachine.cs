@@ -5,156 +5,104 @@ using System.Text;
 
 namespace HotdrinkMachine.Tests
 {
-    public class Coffee : IDrink
+    public class Coffee : IDrink<CoffeeModel>
     {
-        public string BoilWater()
+        private List<CoffeeModel> _drinkModel;
+
+        public List<CoffeeModel> DrinkInProcess
         {
-            return "Boiling water.";
+            get
+            {
+                return _drinkModel;
+            }
+            set
+            {
+                _drinkModel = value;
+            }
         }
-        public string BrewCoffeeGrounds()
+
+        public List<CoffeeModel> PrepareDrink()
         {
-            return "Brewing the coffee grounds.";
-        }
-        public string PourDrinkInCup()
-        {
-            return "Pouring coffee in the cup.";
-        }
-        public string AddSugarAndMilk()
-        {
-            return "Adding Milk & Sugar.";
-        }
-        public string AddLemon()
-        {
-            return null;
-        }
-        public string ChocPowderInWater()
-        {
-            return null;
-        }
-        public string SteepWaterInTea()
-        {
-            return null;
-        }
-        public List<string> PrepareDrink()
-        {
-            List<string> drinks = new List<string>();
-            drinks.Add(BoilWater());
-            drinks.Add(BrewCoffeeGrounds());
-            drinks.Add( PourDrinkInCup());
-            drinks.Add( AddSugarAndMilk());
+            List<CoffeeModel> drinks = new List<CoffeeModel>();
+            var drink = new CoffeeModel();
+            drink.BoilWater = "Boiling water";
+            drink.BrewCoffeeGrounds = "Brewing the coffee grounds";
+            drink.PourCoffeeInCup = "Pouring coffee in the cup";
+            drink.AddSugarAndMilk = "Adding sugar and milk";
+            drinks.Add(drink);
             return drinks;
         }
+    }
+
+    public class LemonTea : IDrink<LemonTeaModel>
+    {
+        private List<LemonTeaModel> _drinkModel;
+
+        public List<LemonTeaModel> DrinkInProcess
+        {
+            get
+            {
+                return _drinkModel;
+            }
+            set
+            {
+                _drinkModel = value;
+            }
+        }
+
+        public List<LemonTeaModel> PrepareDrink()
+        {
+            List<LemonTeaModel> drinks = new List<LemonTeaModel>();
+            LemonTeaModel drink = new LemonTeaModel();
+            drink.BoilWater = "Boiling water";
+            drink.SteepWaterInTea = "Steeping water in the tea";
+            drink.PourTeaInCup = "Pouring tea in the cup";
+            drink.AddLemon = "Adding lemon";
+            drinks.Add(drink);
+            return drinks;
+        }
+    }
+
+    public class Chocolate : IDrink<ChocolateModel>
+    {
+        private List<ChocolateModel> _drinkModel;
+
+        public List<ChocolateModel> DrinkInProcess
+        {
+            get
+            {
+                return _drinkModel;
+            }
+            set
+            {
+                _drinkModel = value;
+            }
+        }
+
+        public List<ChocolateModel> PrepareDrink()
+        {
+            List<ChocolateModel> drinks = new List<ChocolateModel>();
+            var drink = new ChocolateModel();
+            drink.BoilWater = "Boiling water";
+            drink.AddChocPowderInWater = "Add drinking chocolate powder to the water";
+            drink.PourChocolateInTheCup = "Pouring chocolate in the cup";
+            drinks.Add(drink);
+            return drinks;
+        }
+    }
 
 
-        //public List<string> PrepareDrink()
+    internal class HotDrinkMachine
+    {
+    
+        //public HotDrinkMachine(IDrink<T> drink)
         //{
-        //    List<string> lstDrinks = new List<string>();
-        //    lstDrinks.Add(BoilWater());
-        //    lstDrinks.Add(BrewCoffeeGrounds());
-        //    lstDrinks.Add(SteepWaterInTea());
-        //    lstDrinks.Add(PourDrinkInCup());
-        //    lstDrinks.Add(AddSugarAndMilk());
-        //    lstDrinks.Add(ChocPowderInWater());
-        //    lstDrinks.Add(AddLemon());
-        //    lstDrinks = lstDrinks.Where(d => d != null).ToList();
-        //    return lstDrinks;
+        //    _drink = drink;
         //}
-    }
 
-    public class LemonTea : IDrink
-    {
-        public string BoilWater()
+        internal List<T> PrepareHotDrink<T>(IDrink<T> drink)
         {
-            return "Boiling water.";
-        }
-        public string SteepWaterInTea()
-        {
-            return "Steeping water in the tea.";
-        }
-        public string PourDrinkInCup()
-        {
-            return "Pouring tea in the cup.";
-        }
-        public string AddLemon()
-        {
-            return "Adding lemon.";
-        }
-        public string AddSugarAndMilk()
-        {
-            return null;
-        }
-        public string BrewCoffeeGrounds()
-        {
-            return null;
-        }
-        public string ChocPowderInWater()
-        {
-            return null;
-        }
-        public List<string> PrepareDrink()
-        {
-            List<string> drinks = new List<string>();
-            drinks.Add(BoilWater());
-            drinks.Add(SteepWaterInTea());
-            drinks.Add(PourDrinkInCup());
-            drinks.Add(AddLemon());
-            return drinks;
-        }
-    }
-
-    public class Chocolate : IDrink
-    {
-
-        public string BoilWater()
-        {
-            return "Boiling water.";
-        }
-        public string PourDrinkInCup()
-        {
-            return "Pouring chocolate in the cup.";
-        }
-        public string ChocPowderInWater()
-        {
-            return "Add drinking chocolate powder to the water.";
-        }
-        public string AddLemon()
-        {
-            return null;
-        }
-        public string AddSugarAndMilk()
-        {
-            return null;
-        }
-        public string BrewCoffeeGrounds()
-        {
-            return null;
-        }
-        public string SteepWaterInTea()
-        {
-            return null;
-        }
-        public List<string> PrepareDrink()
-        {
-            List<string> drinks = new List<string>();
-            drinks.Add(BoilWater());
-            drinks.Add(ChocPowderInWater());
-            drinks.Add(PourDrinkInCup());
-            return drinks;
-        }
-    }
-
-    internal class HotDrinkMachine 
-    {
-        private IDrink _drink;
-
-        public HotDrinkMachine(IDrink drink)
-        {
-            _drink = drink;
-        }
-
-        internal List<string> PrepareHotDrink()
-        {
-            return _drink.PrepareDrink();
+            return drink.PrepareDrink();
         }
     }
 

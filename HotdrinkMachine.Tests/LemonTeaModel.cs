@@ -1,6 +1,6 @@
 ﻿namespace HotdrinkMachine.Tests
 {
-    public class TeaModel
+    public class LemonTeaModel
     {
         public string BoilWater { get; set; }
         public string SteepWaterInTea { get; set; }

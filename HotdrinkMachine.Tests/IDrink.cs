@@ -1,18 +1,10 @@
-﻿using Microsoft.VisualBasic.CompilerServices;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace HotdrinkMachine.Tests
 {
-     interface IDrink
+     public interface IDrink<T>
     {
-         string BoilWater();
-         string BrewCoffeeGrounds();
-         string PourDrinkInCup();
-         string AddSugarAndMilk();
-         string AddLemon();
-         string ChocPowderInWater();
-         string SteepWaterInTea();
-         List<string> PrepareDrink();
+        List<T> DrinkInProcess { get; set; }
+        List<T> PrepareDrink();
     }
 }

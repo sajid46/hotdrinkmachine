@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Xunit;
 
 namespace HotdrinkMachine.Tests
@@ -13,15 +14,15 @@ namespace HotdrinkMachine.Tests
         {
             // Arrange
             Coffee drink = new Coffee();
-            HotDrinkMachine hotDrinkMachine = new HotDrinkMachine(drink);
-            
+            HotDrinkMachine hotDrinkMachine = new HotDrinkMachine();
+
             // Act
-            var result = hotDrinkMachine.PrepareHotDrink();
+            var result = hotDrinkMachine.PrepareHotDrink(drink);
 
             // Assert
-            Assert.Contains("Boiling water.", result);
-            Assert.Contains("Brewing the coffee grounds.", result);
-            Assert.Contains("Pouring coffee in the cup.", result);
+            Assert.NotNull(result.Where(x => x.BoilWater == "Boiling water"));
+            Assert.NotNull(result.Where(x => x.BrewCoffeeGrounds == "Brewing the coffee grounds"));
+            Assert.NotNull(result.Where(x => x.PourCoffeeInCup == "Pouring coffee in the cup"));
 
         }
         [Fact]
@@ -29,16 +30,16 @@ namespace HotdrinkMachine.Tests
         {
             // Arrange
             LemonTea drink = new LemonTea();
-            HotDrinkMachine hotDrinkMachine = new HotDrinkMachine(drink);
+            HotDrinkMachine hotDrinkMachine = new HotDrinkMachine();
 
             // Act
-            var result = hotDrinkMachine.PrepareHotDrink();
+            var result = hotDrinkMachine.PrepareHotDrink(drink);
 
             // Assert
-            Assert.Contains("Boiling water.", result);
-            Assert.Contains("Steeping water in the tea.", result);
-            Assert.Contains("Pouring tea in the cup.", result);
-            Assert.Contains("Adding lemon.", result);
+            Assert.NotNull(result.Where(x => x.BoilWater == "Boiling water"));
+            Assert.NotNull(result.Where(x => x.SteepWaterInTea == "Steeping water in the tea"));
+            Assert.NotNull(result.Where(x => x.PourTeaInCup == "Pouring tea in the cup"));
+            Assert.NotNull(result.Where(x => x.AddLemon == "Adding lemon"));
 
         }
         [Fact]
@@ -46,15 +47,15 @@ namespace HotdrinkMachine.Tests
         {
             // Arrange
             Chocolate drink = new Chocolate();
-            HotDrinkMachine hotDrinkMachine = new HotDrinkMachine(drink);
+            HotDrinkMachine hotDrinkMachine = new HotDrinkMachine();
 
             // Act
-            var result = hotDrinkMachine.PrepareHotDrink();
+            var result = hotDrinkMachine.PrepareHotDrink(drink);
 
             // Assert
-            Assert.Contains("Boiling water.", result);
-            Assert.Contains("Add drinking chocolate powder to the water.", result);
-            Assert.Contains("Pouring chocolate in the cup.", result);
+            Assert.NotNull(result.Where(x => x.BoilWater == "Boiling water."));
+            Assert.NotNull(result.Where(x => x.AddChocPowderInWater == "Add drinking chocolate powder to the water"));
+            Assert.NotNull(result.Where(x => x.PourChocolateInTheCup == "Pouring chocolate in the cup"));
 
         }
     }
